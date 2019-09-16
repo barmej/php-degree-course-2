@@ -24,4 +24,20 @@ class Character{
 
 }
 
+$hero = new Character();
+$hero->type="بطل";
+$hero->health="200";
+$hero->power="300";
+
+$villain = new Character();
+$villain->type="شرير";
+$villain->health="100";
+$villain->power="400";
+
+$hero->who();
+
+echo "<br>";
+
+$villain->who();
+
 ?>
