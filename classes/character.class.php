@@ -31,8 +31,8 @@ $hero->power="300";
 
 $villain = new Character();
 $villain->type="شرير";
-$villain->health="100";
-$villain->power="400";
+$villain->health="3000";
+$villain->power="2000";
 
 $hero->who();
 
