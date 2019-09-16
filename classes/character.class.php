@@ -5,6 +5,12 @@ class Character{
     public $health;
     public $power;
 
+    function __construct($type, $health, $power){
+        $this->type=$type;
+        $this->health=$health;
+        $this->power = $power;
+    }
+
     public function eat(){
         echo "أنا أكل";
     }
@@ -24,20 +30,21 @@ class Character{
 
 }
 
-$hero = new Character();
-$hero->type="بطل";
-$hero->health="200";
-$hero->power="300";
+$hero = new Character("البطل",300,200);
 
-$villain = new Character();
-$villain->type="شرير";
-$villain->health="3000";
-$villain->power="2000";
+$hero_assistant = new Character("مساعد البطل",100,100);
+
+$villain = new Character("الشرير",200,300);
 
 $hero->who();
 
 echo "<br>";
 
+$hero_assistant->who();
+
+echo "<br>";
+
 $villain->who();
+
 
 ?>
