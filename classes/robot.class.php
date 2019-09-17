@@ -35,10 +35,4 @@ class Robot{
 
 }
 
-$ahmad = new Robot("Ahmad");
-
-$ahmad->setColor("red");
-
-echo $ahmad->getColor();
-
 ?>
