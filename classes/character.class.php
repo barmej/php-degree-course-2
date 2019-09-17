@@ -19,8 +19,18 @@ class Character{
         echo "المحارب نائم";
     }
 
-    public function fight(){
-        echo "المحارب مشغول";
+    public function fight( $target ){
+
+        while(true){
+            $target->health -= $this->power;
+            if( $target->health <= 0 ){ return "فاز المحارب {$this->type}!"; }
+
+            $this->health -= $target->power;
+            if( $this->health <= 0 ){ return "فاز المحارب {$this->type}!"; }
+
+        }
+        
+
     }
 
     public function who(){
@@ -30,21 +40,10 @@ class Character{
 
 }
 
-$hero = new Character("البطل",300,200);
+$hero = new Character("البطل",3000,200);
 
-$hero_assistant = new Character("مساعد البطل",100,100);
+$villain = new Character("الشرير",2000,300);
 
-$villain = new Character("الشرير",200,300);
-
-$hero->who();
-
-echo "<br>";
-
-$hero_assistant->who();
-
-echo "<br>";
-
-$villain->who();
-
+echo $hero->fight($villain);
 
 ?>
