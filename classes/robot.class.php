@@ -9,7 +9,10 @@ class Robot{
     }
 
     function ask($question){
-        echo "You asked {$this->name} the question: {$question}";
+        if($question == "من أنت؟") { echo "أنا {$this->name}"; }
+        else if($question == "كيف حالك؟") { echo "بخير"; }
+        else if($question == "من برمجك؟") { echo "مناور"; }
+        else{ echo "آسف لم أفهمك!"; }
     }
 
     function setColor($color){
